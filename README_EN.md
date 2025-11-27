@@ -30,7 +30,7 @@ Visit **[EMCP Platform](https://sit-emcp.kaleido.guru)** now to start your MCP j
 
 ## Introduction
 
-This is an automatically generated MCP server using [FastMCP](https://fastmcp.wiki) for accessing the Twitter241 API.
+This is an MCP server for accessing the Twitter241 API.
 
 - **PyPI Package**: `bach-twitter241`
 - **Version**: 1.0.0
@@ -108,8 +108,8 @@ export API_KEY="your_api_key_here"
 {
   "mcpServers": {
     "twitter241": {
-      "command": "python",
-      "args": ["E:\path\to\twitter241\server.py"],
+      "command": "uvx",
+      "args": ["--from", "bach-twitter241", "bach_twitter241"],
       "env": {
         "API_KEY": "your_api_key_here"
       }

@@ -1,0 +1,2119 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Twitter241",
+    "version": "1.0.0",
+    "description": "RapidAPI: davethebeast/twitter241"
+  },
+  "servers": [
+    {
+      "url": "https://twitter241.p.rapidapi.com"
+    }
+  ],
+  "paths": {
+    "/about-account": {
+      "get": {
+        "summary": "Get About Account",
+        "description": "Get About Account",
+        "operationId": "get_about_account",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "query",
+            "required": true,
+            "description": "Example value: MrBeast",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/community-details": {
+      "get": {
+        "summary": "Get Community Details",
+        "description": "Get Community Details by Community ID",
+        "operationId": "get_community_details",
+        "parameters": [
+          {
+            "name": "communityId",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 1601841656147345410",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/community-about": {
+      "get": {
+        "summary": "Get Community About",
+        "description": "Get Community About by Community Id",
+        "operationId": "get_community_about",
+        "parameters": [
+          {
+            "name": "communityId",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 1601841656147345410",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/community-tweets": {
+      "get": {
+        "summary": "Get Community Tweets",
+        "description": "Get Community Tweets by Community ID",
+        "operationId": "get_community_tweets",
+        "parameters": [
+          {
+            "name": "communityId",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 1601841656147345410",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "searchType",
+            "in": "query",
+            "required": true,
+            "description": "Default or Media",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "rankingMode",
+            "in": "query",
+            "required": false,
+            "description": "Relevance or Recency or Likes",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": false,
+            "description": "Example value: 20",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/community-moderators": {
+      "get": {
+        "summary": "Get Community Moderators",
+        "description": "Get Community Moderators by Community ID",
+        "operationId": "get_community_moderators",
+        "parameters": [
+          {
+            "name": "communityId",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 1601841656147345410",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/explore-community-timeline": {
+      "get": {
+        "summary": "Get Community Timeline",
+        "description": "Explore Community Timeline",
+        "operationId": "get_community_timeline",
+        "parameters": [
+          {
+            "name": "topicId",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 4",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/community-topics": {
+      "get": {
+        "summary": "Get Community Topics",
+        "description": "Get Community Topics",
+        "operationId": "get_community_topics",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fetch-popular-community": {
+      "get": {
+        "summary": "Fetch Popular Community",
+        "description": "Fetch Popular Community",
+        "operationId": "fetch_popular_community",
+        "parameters": [
+          {
+            "name": "topicId",
+            "in": "query",
+            "required": true,
+            "description": "Get this value from GET /community-topics",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 20",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/search-community": {
+      "get": {
+        "summary": "Search Community",
+        "description": "Search community",
+        "operationId": "search_community",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "description": "Example value: football",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 20",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/community-members": {
+      "get": {
+        "summary": "Get Community Members",
+        "description": "Get Community Members by Community ID",
+        "operationId": "get_community_members",
+        "parameters": [
+          {
+            "name": "communityId",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 1601841656147345410",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/tweet": {
+      "get": {
+        "summary": "Get Tweet Details",
+        "description": "Get Tweet Details By Tweet ID",
+        "operationId": "get_tweet_details",
+        "parameters": [
+          {
+            "name": "pid",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 1631781099415257088",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/comments-v2": {
+      "get": {
+        "summary": "Get Post Comments V2",
+        "description": "Get Post Comments By Post ID V2",
+        "operationId": "get_post_comments_v2",
+        "parameters": [
+          {
+            "name": "pid",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 1924185704613208381",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "rankingMode",
+            "in": "query",
+            "required": false,
+            "description": "Relevance || Likes || Recency",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": false,
+            "description": "Example value: 20",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/list-details": {
+      "get": {
+        "summary": "Get List Details",
+        "description": "Get list details by listId",
+        "operationId": "get_list_details",
+        "parameters": [
+          {
+            "name": "listId",
+            "in": "query",
+            "required": true,
+            "description": "Get this value from \\\\\\\"lists[x].object_id\\\\\\\" returned from GET /search-lists Endpoint",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/list-timeline": {
+      "get": {
+        "summary": "Get List Timeline",
+        "description": "Get list timeline by listId",
+        "operationId": "get_list_timeline",
+        "parameters": [
+          {
+            "name": "listId",
+            "in": "query",
+            "required": true,
+            "description": "Get this value from \\\\\\\"lists[x].object_id\\\\\\\" returned from GET /search-lists Endpoint",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/search-lists": {
+      "get": {
+        "summary": "Search Lists",
+        "description": "Search lists",
+        "operationId": "search_lists",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "description": "Example value: football",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/highlights": {
+      "get": {
+        "summary": "Get Highlights",
+        "description": "Get user highlights by ID",
+        "operationId": "get_highlights",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 877807935493033984",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 20",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/followers-ids": {
+      "get": {
+        "summary": "Get User Followers IDs",
+        "description": "GET Followers IDs by Username",
+        "operationId": "get_user_followers_ids",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "query",
+            "required": true,
+            "description": "Example value: mrbeast",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": true,
+            "description": "Maximum count is 5000",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/verified-followers": {
+      "get": {
+        "summary": "Get User Verified Followers",
+        "description": "Get User Verified Followers By ID.   You can get the user(rest_id) query from \\",
+        "operationId": "get_user_verified_followers",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 877807935493033984",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 20",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/following-ids": {
+      "get": {
+        "summary": "Get User Following IDs",
+        "description": "GET Following IDs by Username",
+        "operationId": "get_user_following_ids",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "query",
+            "required": true,
+            "description": "Example value: mrbeast",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": true,
+            "description": "Maximum count is 5000",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/followers": {
+      "get": {
+        "summary": "Get User Followers",
+        "description": "Get User Followers By ID.   You can get the user(rest_id) query from \\",
+        "operationId": "get_user_followers",
+        "parameters": [
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "user",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 2455740283",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 20",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/followings": {
+      "get": {
+        "summary": "Get User Followings",
+        "description": "Get User Followings By ID.   You can get the user(rest_id) query from \\",
+        "operationId": "get_user_followings",
+        "parameters": [
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "user",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 2455740283",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 20",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user-tweets": {
+      "get": {
+        "summary": "Get User Tweets",
+        "description": "Get User Tweets By ID  You can get the user(rest_id) query from \\",
+        "operationId": "get_user_tweets",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 2455740283",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 20",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user-media": {
+      "get": {
+        "summary": "Get User Media",
+        "description": "Get User Media By ID  You can get the user(rest_id) query from \\",
+        "operationId": "get_user_media",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 2455740283",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 20",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user-replies-v2": {
+      "get": {
+        "summary": "Get User Replies V2",
+        "description": "Get User Replies By ID  You can get the user(rest_id) query from \\",
+        "operationId": "get_user_replies_v2",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 2455740283",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 20",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user": {
+      "get": {
+        "summary": "Get User By Username",
+        "description": "Gets a user by username",
+        "operationId": "get_user_by_username",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "query",
+            "required": true,
+            "description": "Example value: MrBeast",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user-replies": {
+      "get": {
+        "summary": "Get User Replies",
+        "description": "Get User Replies By ID  You can get the user(rest_id) query from \\",
+        "operationId": "get_user_replies",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 2455740283",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 20",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/get-users": {
+      "get": {
+        "summary": "Get Users By IDs",
+        "description": "Get Users By IDs (Rest IDs)",
+        "operationId": "get_users_by_ids",
+        "parameters": [
+          {
+            "name": "users",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 2455740283,44196397",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/get-users-v2": {
+      "get": {
+        "summary": "Get Users By IDs V2",
+        "description": "Get Users By IDs V2",
+        "operationId": "get_users_by_ids_v2",
+        "parameters": [
+          {
+            "name": "users",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 1222790936679206913,133938408,34186021",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/list-members": {
+      "get": {
+        "summary": "Get List Members",
+        "description": "Get List Members by List ID",
+        "operationId": "get_list_members",
+        "parameters": [
+          {
+            "name": "listId",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 1238730743569772544",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": false,
+            "description": "Example value: 20",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/list-followers": {
+      "get": {
+        "summary": "Get List  Followers",
+        "description": "Get List  Followers by List ID",
+        "operationId": "get_list__followers",
+        "parameters": [
+          {
+            "name": "listId",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 1238730743569772544",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": false,
+            "description": "Example value: 20",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/trends-by-location": {
+      "get": {
+        "summary": "Get Trends By Location",
+        "description": "Get Trends By Location",
+        "operationId": "get_trends_by_location",
+        "parameters": [
+          {
+            "name": "woeid",
+            "in": "query",
+            "required": true,
+            "description": "This value can be gotten from the Get Available Trends Locations endpoint.",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "exclude",
+            "in": "query",
+            "required": false,
+            "description": "Setting this value equal to hashtags will remove all hashtags from the response list.",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/trends-locations": {
+      "get": {
+        "summary": "Get Available Trends Locations",
+        "description": "Get Available Trends Locations",
+        "operationId": "get_available_trends_locations",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/quotes": {
+      "get": {
+        "summary": "Get Post Quotes",
+        "description": "Get Post Quotes By Post ID",
+        "operationId": "get_post_quotes",
+        "parameters": [
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "pid",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 1552735248026411010",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 40",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/retweets": {
+      "get": {
+        "summary": "Get Post Retweets",
+        "description": "Get Post Retweets By Post ID",
+        "operationId": "get_post_retweets",
+        "parameters": [
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "pid",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 1552735248026411010",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 40",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/comments": {
+      "get": {
+        "summary": "Get Post Comments",
+        "description": "Get Post Comments By Post ID",
+        "operationId": "get_post_comments",
+        "parameters": [
+          {
+            "name": "pid",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 1552735248026411010",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 40",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/tweet-by-ids": {
+      "get": {
+        "summary": "Get Tweets Details By IDs",
+        "description": "Get Tweets Details By Tweet IDs",
+        "operationId": "get_tweets_details_by_ids",
+        "parameters": [
+          {
+            "name": "tweetIds",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 1892702078029476328,1885213980739711144,1886671728941924567,1905285543136551299",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/tweet-v2": {
+      "get": {
+        "summary": "Get Tweet Details V2",
+        "description": "Get Tweet Details By Tweet ID",
+        "operationId": "get_tweet_details_v2",
+        "parameters": [
+          {
+            "name": "pid",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 1631781099415257088",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/job-details": {
+      "get": {
+        "summary": "Job Details",
+        "description": "Get Job Details",
+        "operationId": "job_details",
+        "parameters": [
+          {
+            "name": "jobId",
+            "in": "query",
+            "required": true,
+            "description": "Get this value from \\\\\\\\\\\\\\\"rest_id\\\\\\\\\\\\\\\" returned from GET /jobs-search Endpoint",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/jobs-search": {
+      "get": {
+        "summary": "Search Jobs",
+        "description": "Search Jobs",
+        "operationId": "search_jobs",
+        "parameters": [
+          {
+            "name": "keyword",
+            "in": "query",
+            "required": true,
+            "description": "Example value: python",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 20",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "job_location_id",
+            "in": "query",
+            "required": false,
+            "description": "Get this value from GET /jobs-locations-suggest (Search Job Locations).",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "job_location_type",
+            "in": "query",
+            "required": false,
+            "description": "onsite,remote,hybrid. One of them or multiple values with comma as seperator",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "seniority_level",
+            "in": "query",
+            "required": false,
+            "description": "intern,entry_level,junior,mid_level,senior,lead,manager,executive. One of them or multiple values with comma as seperator",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "employment_type",
+            "in": "query",
+            "required": false,
+            "description": "full_time,full_time_contract,part_time,contract_to_hire. One of them or multiple values with comma as seperator",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/jobs-locations-suggest": {
+      "get": {
+        "summary": "Search Job Locations",
+        "description": "Suggest Job Locations",
+        "operationId": "search_job_locations",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "description": "Example value: CA",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user-likes": {
+      "get": {
+        "summary": "Get User Likes",
+        "description": "Get User Likes By ID  You can get the user(rest_id) query from \\",
+        "operationId": "get_user_likes",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 2455740283",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 20",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/search-v2": {
+      "get": {
+        "summary": "Search Twitter V2",
+        "description": "Search Twitter (Top, Latest, Videos, Photos and People)",
+        "operationId": "search_twitter_v2",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "required": true,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 20",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "description": "Example value: Mr Beast",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/spaces": {
+      "get": {
+        "summary": "Space Details",
+        "description": "Get Space Details By ID",
+        "operationId": "space_details",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 1djGXrBwYEjxZ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/org-affiliates": {
+      "get": {
+        "summary": "Get Organization Affiliates",
+        "description": "Get  Organization Affiliates By ID  You can get the user(rest_id) query from \\",
+        "operationId": "get_organization_affiliates",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 377228272",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 20",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/search": {
+      "get": {
+        "summary": "Search Twitter",
+        "description": "Search Twitter (Top, Latest, Videos, Photos and People)",
+        "operationId": "search_twitter",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "required": true,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 20",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "description": "Example value: Mr Beast",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/autocomplete": {
+      "get": {
+        "summary": "Autocomplete",
+        "description": "Twitter Seach Query Autocomplete",
+        "operationId": "autocomplete",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "query",
+            "required": true,
+            "description": "Example value: MrB",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/likes": {
+      "get": {
+        "summary": "Get Post Likes",
+        "description": "Get Post Likes By Post ID",
+        "operationId": "get_post_likes",
+        "parameters": [
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "pid",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 1552735248026411010",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 40",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "ApiAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-RapidAPI-Key"
+      }
+    }
+  },
+  "security": [
+    {
+      "ApiAuth": []
+    }
+  ]
+}
